@@ -4,6 +4,7 @@ import Arrowfunction from './component/arrowfunction';
 import Test from './component/test'
 import Variable from './component/variable';
 import Array from './component/Array';
+import Destructing from './component/Destructing';
 function App() {
   return (
 
@@ -13,6 +14,7 @@ function App() {
       <Test/>
       <Variable/>
       <Array/>
+      <Destructing/>
   </div>
   
 
