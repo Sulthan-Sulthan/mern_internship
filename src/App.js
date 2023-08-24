@@ -5,6 +5,8 @@ import Test from './component/test'
 import Variable from './component/variable';
 import Array from './component/Array';
 import Destructing from './component/Destructing';
+import Spreadoperator from './component/Spreadoperator';
+
 function App() {
   return (
 
@@ -15,6 +17,8 @@ function App() {
       <Variable/>
       <Array/>
       <Destructing/>
+      <Spreadoperator/>
+
   </div>
   
 

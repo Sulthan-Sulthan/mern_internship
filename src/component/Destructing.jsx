@@ -16,8 +16,17 @@ export default function Destructing() {
         model : "mustang",
         type : "car",
         year : 2021,
-        color : "black"
+        color : "black",
+       registration:{
+        city : "manglore",
+        country : "india",
+        state : "karnataka"
+
+       }
     }
+
+    const {brand,model,type,year,color,registration:{city,state}} = vehicle
+
   return (
     <div><h1 className = "App" style={{backgroundColor:"black",color:"white"}}>
             Destructing
@@ -29,7 +38,7 @@ export default function Destructing() {
     <h1>{car22}</h1>
     <h1>{car33}</h1>
     <h1>{x+y*z}</h1>
-    <h1>{vehicle}</h1>
+    <h1> I have {color} {brand} {model} {state}</h1>
     </div>
   )
 }
