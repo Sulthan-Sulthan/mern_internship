@@ -19,8 +19,8 @@ export default function Spreadoperator() {
         color : "red"
 
     }
+    // const updated =[...MyVehicle,...updatedMyVehicle]
 
-    
   return (
     <div><h1 className = "App" style={{backgroundColor:"black",color:"white"}}>
             Spreadoperator
@@ -28,7 +28,7 @@ export default function Spreadoperator() {
     <h1>{num1}</h1>
     <h1>{num2}</h1>
     <h1>{numberscombined}</h1>
-    <h1></h1>
+    
     </div>
   )
 }
