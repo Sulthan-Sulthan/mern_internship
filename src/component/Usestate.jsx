@@ -13,7 +13,7 @@ export default function Usestate() {
     <h1>{name}</h1>
     <button onClick={handleName}>Change</button>
     <h2>{name}</h2>
-    <input type='text' onChange={(e)} placeholder="enter your name"/>
+    {/* <input type='text' onChange={(e)} placeholder="enter your name"/> */}
     </div>
   )
 }

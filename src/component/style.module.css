@@ -1,7 +1,11 @@
-*{
-    background: aliceblue;
+/* *{
+    background: black;
+    color: #fff;
 }
-button{
-    background-color: blue;
-    /* color: aliceblue; */
+.pass {
+    color: green;
 }
+
+.fail {
+    color: red;
+} */
