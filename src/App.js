@@ -10,7 +10,7 @@ import Ternaryoperator from './component/Ternaryoperator';
 import Imp from './component/Imp';
 import Props from './component/Props';
 import Usestate from './component/Usestate';
-// import Router from './component/router';
+import Router from './component/router';
 import Mui from './component/Mui';
 
 function App() {
@@ -28,8 +28,8 @@ function App() {
       <Imp/>
       <Props/>
       <Usestate/> */}
-      {/* <Router/> */}
-      <Mui/>
+      <Router/>
+      {/* <Mui/> */}
 
 
   </div>
