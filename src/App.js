@@ -12,6 +12,8 @@ import Props from './component/Props';
 import Usestate from './component/Usestate';
 import Router from './component/router';
 import Mui from './component/Mui';
+import View from './component/View';
+import UseEffect from './component/UseEffect';
 
 function App() {
   return (
@@ -29,6 +31,8 @@ function App() {
       <Props/>
       <Usestate/> */}
       <Router/>
+      {/* <View/> */}
+      {/* <UseEffect/> */}
       {/* <Mui/> */}
 
 

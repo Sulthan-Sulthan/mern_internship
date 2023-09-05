@@ -12,6 +12,11 @@ export default function Home() {
     <Link to ="/array">Go to array</Link><br></br>
     <Link to ="/destructing"><button>Go to destructing</button></Link>
     <Link to ="/usestate"><button>usestate</button></Link>
+    <Link to ="/Useeffect"><button>Useeffect</button></Link>
+    <Link to ="/view"><button>view</button></Link>
+    <Link to ="*"><button>Error</button></Link>
+    
+    
 
     </div>
   )
