@@ -1,5 +1,5 @@
 import React,{ useState ,useEffect} from 'react'
-
+import {useNavigate} from 'react-router-dom'
 
 export default function Usestate() {
     const [name,setName] = useState("Ramzi");
@@ -27,7 +27,7 @@ export default function Usestate() {
     const handleSave=()=>{
         localStorage.setItem("Name",name)
     }
-    let initialValue = localStorage.getItem("Student")?JSON.parse(localStorage.getItem("Student")):[]
+    let initialValue = localStorage.getItem("student")?JSON.parse(localStorage.getItem("student")):[]
     const [display, setDisplay]=useState(initialValue)
 
     const [student1 ,setStudent1] = useState({
@@ -39,13 +39,21 @@ export default function Usestate() {
     const handleStudent=(e)=>{
     setStudent1({...student1,[e.target.name]:e.target.value})
     }
-    const handleSubmit =()=>{
+    let nav =useNavigate();
+    const  handleSubmit =()=>{
       setDisplay([...display,student1])
+      let newdisplay =[...display,student1]
+      localStorage.setItem("student",JSON.stringify(newdisplay))
+      nav('/view')
       
     }
-    useEffect(()=>{
-      localStorage.setItem( 'student',JSON.stringify(display) )
-    },[display])
+    // useEffect(()=>{
+    //   localStorage.setItem( 'student',JSON.stringify(display) )
+    // },[display])
+
+    
+
+
   return (
     <div>
         <h1 style={{backgroundColor:"blue",color:"white"}}>Usestate Start</h1>

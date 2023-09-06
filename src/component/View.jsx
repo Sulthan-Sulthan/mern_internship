@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
-
+import { Link } from 'react-router-dom';
 
 const style = {
   position: 'absolute',
@@ -33,6 +33,7 @@ export default function View() {
     const Delete=()=>{
        let newView = view.filter((item,index)=>{return index!==deleteIndex})
        setView(newView)
+       console.log(newView)
        localStorage.setItem("student", JSON.stringify(newView))
        handleClose()
     //    alert("delete")
@@ -60,8 +61,8 @@ export default function View() {
                   <td>{item.phone}</td>
                   <td>{item.email}</td>
                   <td>{item.address}</td>
-                  <td><button>Edit</button></td>
-                  <td><Button onClick={()=>handleOpen(--i)}>Delete</Button></td>
+                  <td><Link to={`/edit/${--i}`}><button>Edit</button></Link></td>
+                  <td><Button onClick={()=>handleOpen(i)}>Delete</Button></td>
                 </tr>
 
             )})}

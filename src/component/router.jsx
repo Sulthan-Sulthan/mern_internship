@@ -8,7 +8,8 @@ import Destructing from './Destructing'
 import Spreadoperator from './Spreadoperator'
 import Usestate from './Usestate'
 import UseEffect from './UseEffect'
-// import Error from './Error'
+import Edit from './Edit'
+import Error from './Error'
 import View from './View'
 export default function router() {
   return (
@@ -25,7 +26,8 @@ export default function router() {
                 <Route exact path ="/usestate" element={<Usestate/>}/>
                 <Route exact path ="/Useeffect" element={<UseEffect/>}/>
                 <Route exact path ="/view" element={<View/>}/>
-                {/* <Route exact path ="*" element={<Error/>}/> */}
+                <Route exact path ="/edit/:id" element={<Edit/>}/>
+                <Route exact path ="*" element={<Error/>}/>
             </Routes>
         </BrowserRouter>
     </div>
