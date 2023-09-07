@@ -11,6 +11,7 @@ import UseEffect from './UseEffect'
 import Edit from './Edit'
 import Error from './Error'
 import View from './View'
+import SingleView from './SingleView'
 export default function router() {
   return (
     <div>
@@ -26,6 +27,7 @@ export default function router() {
                 <Route exact path ="/usestate" element={<Usestate/>}/>
                 <Route exact path ="/Useeffect" element={<UseEffect/>}/>
                 <Route exact path ="/view" element={<View/>}/>
+                <Route exact path ="/singleView/:id" element={<SingleView/>}/>
                 <Route exact path ="/edit/:id" element={<Edit/>}/>
                 <Route exact path ="*" element={<Error/>}/>
             </Routes>

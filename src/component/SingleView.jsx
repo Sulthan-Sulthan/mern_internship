@@ -1,41 +1,58 @@
-import React, { useEffect, useState } from 'react'
-import { Link, useParams } from 'react-router-dom'
-import Image from '../logo.svg'
-
-export default function SingleView({ value }) {
-  const [single, setSingle] = useState([])
-  const params = useParams()
-  // console.log(params)
-  // console.log(value)
-
-
-  useEffect(() => {
-    setSingle(value.filter((e) => e.emp_id == params.id))
-  }, [])
+import React ,{useEffect,useState}from 'react'
+import Box from '@mui/material/Box';
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
+import { Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 
-  console.log(single);
 
+export default function BasicCard() {
+  let params = useParams();
+  console.log(params)
 
+  const [student,setStudent] =useState({})
+
+  useEffect(()=>{
+    let alldata =JSON.parse(localStorage.getItem("student"))
+    let  singleStudent = alldata.filter((item,index)=>{ return index == params.id})
+      console.log(singleStudent)
+      setStudent(singleStudent[0])
+       console.log(singleStudent,'alldata')
+  },[])
+ 
   return (
-
-    <div>
-      {single.map((item) => {
-        return (
-          <div className="card" style={{ width: "18rem" }}>
-            <img src={Image} className="card-img-top" alt="...no image" />
-            <div className="card-body">
-              <h5 className="card-title">Employee ID : {item.emp_id}</h5>
-              <h5 className="card-title">Name : {item.name}</h5>
-              <h5 className="card-title">Phone : {item.phone}</h5>
-              <h5 className="card-title">Email : {item.email}</h5>
-
-              <Link to="/" className="btn btn-primary">Go Back</Link>
-            </div>
-          </div>
-        )
-      })}
-
-    </div>
-  )
+    <Box sx={{
+      display : "flex",
+      justifyContent : "center",
+      alignItems : "center",
+      position : "relative",
+      top: "165px"}}>
+        <Card sx={{ minWidth: 275 }}>
+      <CardContent>
+        <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+          {student.name}
+        </Typography>
+        <Typography variant="h5" component="div">
+          
+        </Typography>
+        <Typography sx={{ mb: 1.5 }} color="text.secondary">
+          {student.phone}
+        </Typography>
+        <Typography variant="body2">
+          {student.email}
+          <br />
+          {student.address}
+        </Typography>
+      </CardContent>
+      <CardActions>
+        <Button ><Link to='/view'>view</Link></Button>
+      </CardActions>
+    </Card>
+    </Box>
+  
+  );
 }

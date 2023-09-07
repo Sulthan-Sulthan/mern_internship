@@ -49,6 +49,7 @@ export default function View() {
                 <th>Email</th>
                 <th>Address</th>
                 <th>Edit </th>
+                <th>view </th>
                 <th>Delete </th>
             </tr>
 
@@ -62,6 +63,7 @@ export default function View() {
                   <td>{item.email}</td>
                   <td>{item.address}</td>
                   <td><Link to={`/edit/${--i}`}><button>Edit</button></Link></td>
+                  <td><Link to={`/singleView/${i}`}><button>view</button></Link></td>
                   <td><Button onClick={()=>handleOpen(i)}>Delete</Button></td>
                 </tr>
 
